@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html data-ng-app="sampleApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>$scope.$watch Sample</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body data-ng-controller="sampleController" data-ng-cloak>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+                <h1 class="page-header text-center">$scope.$watch Sample</h1>
+                <div id="name-group" class="form-group">
+                    <label>Username</label>
+                    <input type="text" name="name" class="form-control" data-ng-model="data.userName">
+                    <span class="help-block" ng-class="{'input-error' : data.longUserName }" ng-show="data.longUserName">Your Username is too long</span>
+                    <span class="help-block" ng-class="{'input-error' : data.shortUserName }" ng-show="data.shortUserName">Your Username is too short</span>
+                    <span>{{ data.userName }}</span>
+                </div>
+                <div id="pass-group" class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control" data-ng-model="data.userPass">
+                    <span class="help-block" ng-class="{'input-error' : data.longUserPass }" ng-show="data.longUserPass">Your Password is too long</span>
+                    <span class="help-block" ng-class="{'input-error' : data.shortUserPass }" ng-show="data.shortUserPass">Your Password is too short</span>
+                    <span>{{ data.userPass }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--Scripts-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="app.js"></script>
+<script src="controller.js"></script>
+
+</body>
+</html>

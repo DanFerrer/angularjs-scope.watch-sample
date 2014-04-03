@@ -1,0 +1,10 @@
+.input-error {
+    font-family: 'Oswald', sans-serif;
+    color: darkred;
+    font-size: 32px;
+    letter-spacing: 2px ;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
