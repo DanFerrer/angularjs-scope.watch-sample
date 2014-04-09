@@ -17,15 +17,15 @@
                 <div id="name-group" class="form-group">
                     <label>Username</label>
                     <input type="text" name="name" class="form-control" data-ng-model="data.userName">
-                    <span class="help-block" ng-class="{'input-error' : data.longUserName }" ng-show="data.longUserName">Your Username is too long</span>
-                    <span class="help-block" ng-class="{'input-error' : data.shortUserName }" ng-show="data.shortUserName">Your Username is too short</span>
+                    <span class="help-block" data-ng-class="{'input-error' : data.longUserName }" data-ng-show="data.longUserName">Your Username is too long</span>
+                    <span class="help-block" data-ng-class="{'input-error' : data.shortUserName }" data-ng-show="data.shortUserName">Your Username is too short</span>
                     <span>{{ data.userName }}</span>
                 </div>
                 <div id="pass-group" class="form-group">
                     <label>Password</label>
                     <input type="password" name="password" class="form-control" data-ng-model="data.userPass">
-                    <span class="help-block" ng-class="{'input-error' : data.longUserPass }" ng-show="data.longUserPass">Your Password is too long</span>
-                    <span class="help-block" ng-class="{'input-error' : data.shortUserPass }" ng-show="data.shortUserPass">Your Password is too short</span>
+                    <span class="help-block" data-ng-class="{'input-error' : data.longUserPass }" data-ng-show="data.longUserPass">Your Password is too long</span>
+                    <span class="help-block" data-ng-class="{'input-error' : data.shortUserPass }" data-ng-show="data.shortUserPass">Your Password is too short</span>
                     <span>{{ data.userPass }}</span>
                 </div>
             </div>
